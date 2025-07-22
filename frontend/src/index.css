@@ -1,3 +1,227 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* GENERAL DARK THEME */
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* NAVBAR */
+.navbar {
+  padding: 1rem 2rem;
+  background-color: #1f1f1f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link {
+  margin-right: 1.5rem;
+  text-decoration: none;
+  color: #e0e0e0;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #90cdf4;
+  text-decoration: underline;
+}
+
+/* TITLES */
+h1, h2 {
+  color: #fafafa;
+  margin-bottom: 0.75rem;
+}
+
+/* BUTTONS */
+button,
+.btn,
+.list-button,
+.form-button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+button:hover,
+.btn:hover,
+.list-button:hover,
+.form-button:hover {
+  background-color: #1e40af;
+}
+
+/* SPECIAL BUTTONS */
+.btn-edit {
+  background-color: #3b82f6;
+}
+
+.btn-edit:hover {
+  background-color: #1e3a8a;
+}
+
+.btn-delete,
+.delete-button {
+  background-color: #ef4444;
+}
+
+.btn-delete:hover,
+.delete-button:hover {
+  background-color: #dc2626;
+}
+
+.edit-button {
+  background-color: #10b981;
+}
+
+.edit-button:hover {
+  background-color: #059669;
+}
+
+/* FORM */
+.form,
+.form-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-input,
+.form-select {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+}
+
+.form-input:focus,
+.form-select:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+
+/* PRODUCT LIST */
+.product-list {
+  padding: 1rem;
+}
+
+.product-list-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #fafafa;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.product-card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  flex: 1 1 calc(33% - 1rem);
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #333;
+}
+
+.product-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #fafafa;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+}
+
+.product-price {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #60a5fa;
+}
+
+.product-category {
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  color: #ccc;
+}
+
+.product-category-name {
+  font-weight: 500;
+}
+
+/* ACTIONS */
+.product-actions,
+.item-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.item-actions button {
+  margin-left: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* CATEGORY LIST */
+.list-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.list-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #fafafa;
+}
+
+.list-button {
+  margin-bottom: 1rem;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  border-bottom: 1px solid #333;
+}

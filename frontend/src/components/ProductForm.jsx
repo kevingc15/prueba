@@ -31,17 +31,43 @@ function ProductForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input name="name" placeholder="Nombre" onChange={handleChange} value={form.name} />
-      <input name="description" placeholder="Descripción" onChange={handleChange} value={form.description} />
-      <input name="price" type="number" placeholder="Precio" onChange={handleChange} value={form.price} />
-      <select name="category_id" onChange={handleChange} value={form.category_id}>
+    <form onSubmit={handleSubmit} className="form">
+      <input
+        name="name"
+        placeholder="Nombre"
+        onChange={handleChange}
+        value={form.name}
+        className="form-input"
+      />
+      <input
+        name="description"
+        placeholder="Descripción"
+        onChange={handleChange}
+        value={form.description}
+        className="form-input"
+      />
+      <input
+        name="price"
+        type="number"
+        placeholder="Precio"
+        onChange={handleChange}
+        value={form.price}
+        className="form-input"
+      />
+      <select
+        name="category_id"
+        onChange={handleChange}
+        value={form.category_id}
+        className="form-select"
+      >
         <option value="">Selecciona una categoría</option>
         {categories.map((c) => (
           <option key={c.id} value={c.id}>{c.name}</option>
         ))}
       </select>
-      <button type="submit">{id ? 'Actualizar' : 'Crear'}</button>
+      <button type="submit" className="form-button">
+        {id ? 'Actualizar' : 'Crear'}
+      </button>
     </form>
   );
 }

@@ -21,15 +21,20 @@ function CategoryList() {
   }, []);
 
   return (
-    <div>
-      <h2>Categorías</h2>
-      <button onClick={() => navigate('/categorias/nueva')}>Nueva Categoría</button>
-      <ul>
+    <div className="list-container">
+      <h2 className="list-title">Categorías</h2>
+      <ul className="list">
         {categories.map((cat) => (
-          <li key={cat.id}>
-            {cat.name}
-            <button onClick={() => navigate(`/categorias/editar/${cat.id}`)}>Editar</button>
-            <button onClick={() => handleDelete(cat.id)}>Eliminar</button>
+          <li key={cat.id} className="list-item">
+            <span>{cat.name}</span>
+            <div className="item-actions">
+              <button onClick={() => navigate(`/categorias/editar/${cat.id}`)} className="edit-button">
+                Editar
+              </button>
+              <button onClick={() => handleDelete(cat.id)} className="delete-button">
+                Eliminar
+              </button>
+            </div>
           </li>
         ))}
       </ul>

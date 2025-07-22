@@ -7,11 +7,11 @@ import CategoryList from './components/CategoryList';
 function App() {
   return (
     <>
-      <nav style={{ padding: '1rem', backgroundColor: '#eee', marginBottom: '1rem' }}>
-        <Link to="/products" style={{ marginRight: '1rem' }}>Productos</Link>
-        <Link to="/products/create" style={{ marginRight: '1rem' }}>Crear Producto</Link>
-        <Link to="/categories" style={{ marginRight: '1rem' }}>Categorías</Link>
-        <Link to="/categories/create">Crear Categoría</Link>
+      <nav className="navbar">
+        <Link to="/products" className="nav-link">Productos</Link>
+        <Link to="/products/create" className="nav-link">Crear Producto</Link>
+        <Link to="/categories" className="nav-link">Categorías</Link>
+        <Link to="/categories/create" className="nav-link">Crear Categoría</Link>
       </nav>
 
       <Routes>

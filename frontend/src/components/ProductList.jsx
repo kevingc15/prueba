@@ -19,33 +19,22 @@ function ProductList() {
   }, []);
 
   return (
-     <div className="py-6">
-      <h2 className="text-2xl font-bold mb-6 text-gray-800">📦 Productos</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="product-list">
+      <h2 className="product-list-title">📦 Productos</h2>
+      <div className="product-grid">
         {products.map((prod) => (
-          <div
-            key={prod.id}
-            className="bg-white rounded-2xl shadow-lg p-5 flex flex-col justify-between border hover:shadow-xl transition"
-          >
+          <div key={prod.id} className="product-card">
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-1">{prod.name}</h3>
-              <p className="text-sm text-gray-500 mb-2">{prod.description}</p>
-              <p className="text-md font-medium text-blue-600">${prod.price}</p>
-              <p className="text-sm text-gray-600 mt-1">Categoría: <span className="font-medium">{prod.category_name}</span></p>
+              <h3 className="product-name">{prod.name}</h3>
+              <p className="product-description">{prod.description}</p>
+              <p className="product-price">${prod.price}</p>
+              <p className="product-category">
+                Categoría: <span className="product-category-name">{prod.category_name}</span>
+              </p>
             </div>
-            <div className="flex justify-end gap-2 mt-4">
-              <button
-                onClick={() => onEdit(prod)}
-                className="bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600 text-sm transition"
-              >
-                Editar
-              </button>
-              <button
-                onClick={() => onDelete(prod.id)}
-                className="bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600 text-sm transition"
-              >
-                Eliminar
-              </button>
+            <div className="product-actions">
+              <button onClick={() => onEdit(prod)} className="btn btn-edit">Editar</button>
+              <button onClick={() => onDelete(prod.id)} className="btn btn-delete">Eliminar</button>
             </div>
           </div>
         ))}

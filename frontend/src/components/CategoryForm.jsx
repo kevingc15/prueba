@@ -28,15 +28,18 @@ function CategoryForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form-container">
       <input
         name="name"
         placeholder="Nombre de categoría"
         value={form.name}
         onChange={handleChange}
         required
+        className="form-input"
       />
-      <button type="submit">{id ? 'Actualizar' : 'Crear'}</button>
+      <button type="submit" className="form-button">
+        {id ? 'Actualizar' : 'Crear'}
+      </button>
     </form>
   );
 }
